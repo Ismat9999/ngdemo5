@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ngdemo5/pages/home_page.dart';
+import 'package:ngdemo5/pages/signup_page.dart';
 
 class SignInPage extends StatefulWidget {
   static const String id="signin page";
@@ -9,6 +11,16 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+
+  _callSignUpPage(){
+    Navigator.of(context).pushReplacementNamed(SignUpPage.id);
+  }
+
+  _callHomePage(){
+    Navigator.of(context).pushReplacementNamed(HomePage.id);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +85,7 @@ class _SignInPageState extends State<SignInPage> {
                       //#signin button
                       GestureDetector(
                         onTap: (){
-                          //visit to home page
+                         _callHomePage();
                         },
                         child: Container(
                           margin: EdgeInsets.only(top: 10),
@@ -101,7 +113,7 @@ class _SignInPageState extends State<SignInPage> {
                   SizedBox(width: 10,),
                 GestureDetector(
                   onTap: (){
-
+_callSignUpPage();
                   },
                     child: Text("Sign Up",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)),
                 ],

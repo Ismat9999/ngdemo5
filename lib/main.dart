@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ngdemo5/pages/home_page.dart';
 import 'package:ngdemo5/pages/signin_page.dart';
+import 'package:ngdemo5/pages/signup_page.dart';
 import 'package:ngdemo5/pages/splash_page.dart';
 
 void main() {
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashPage.id:(context)=> SplashPage(),
         SignInPage.id:(context)=> SignInPage(),
+        SignUpPage.id:(context)=> SignUpPage(),
+        HomePage.id:(context)=> HomePage(),
       },
     );
   }
